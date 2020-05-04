@@ -5,6 +5,7 @@
 		<p><h1>
             Supprimer?
         </h1>
+		<?= $place['auteur'] ?> dit :<br/>
         <strong><?= $place['Adresse'] ?></strong><br/>
         <?= $place['Description'] ?>
         </p>

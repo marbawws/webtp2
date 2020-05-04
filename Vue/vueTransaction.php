@@ -18,6 +18,7 @@
 		<a href="index.php?action=confirmer&id=<?= $place['id'] ?>" > <!--action-->
 			[Supprimer]
 		</a>
+		<!--<?//= $place['auteur'] ?> dit : <br/>-->
 		<strong><?= $place['Adresse'] ?></strong><br/>
 		<?= $place['Description'] ?>
     </p>
@@ -26,9 +27,9 @@
 <form action="index.php?action=place" method="post"> <!--action-->
     <h2>Ajouter une place</h2>
     <p>
-        <!--<label for="auteur">Courriel de l'auteur (xxx@yyy.zz)</label> : <input type="text" name="auteur" id="auteur" /> 
-        <//?= ($erreur == 'courriel') ? '<span style="color : red;">Entrez un courriel valide s.v.p.</span>' : '' ?> 
-        <br /> -->
+        <label for="auteur">Courriel de l'auteur (xxx@yyy.zz)</label> : <input type="text" name="auteur" id="auteur" /> 
+        <?= ($erreur == 'courriel') ? '<span style="color : red;">Entrez un courriel valide s.v.p.</span>' : '' ?> 
+        <br />
         <label for="texte">Adresse</label> :  <input type="text" name="Adresse" id="Adresse" /><br />
         <label for="texte">Description</label> :  <textarea type="text" name="Description" id="Description" >Écrivez la description ici</textarea><br />
         <input type="hidden" name="transaction_id" value="<?= $transaction['id'] ?>" /><br />

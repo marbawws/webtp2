@@ -19,7 +19,7 @@ function getTransactions() {
 function setTransaction($transaction) {
     $bdd = getBdd();
     $result = $bdd->prepare('INSERT INTO transactions (Daate, Prix, Utilisateur_id, retourInformation) VALUES(?, ?, ?, ?)');
-    $result->execute(array($transaction[Daate], $transaction[Prix], $transaction[utilisateur_id], $transaction[retourInformation]));
+    $result->execute(array($transaction[Daate], $transaction[Prix], $transaction[Utilisateur_id], $transaction[retourInformation]));
     return $result;
 }
 
@@ -74,8 +74,8 @@ function deletePlace($id) {
 // Ajoute un place associés à un transaction
 function setPlace($place) {
     $bdd = getBdd();
-    $result = $bdd->prepare('INSERT INTO places (Adresse, Description, transaction_id) VALUES(?, ?, ?)');
-    $result->execute(array($place['Adresse'], $place['Description'], $place['transaction_id']));
+    $result = $bdd->prepare('INSERT INTO places (Adresse, Description, auteur, transaction_id) VALUES(?, ?, ?, ?)');
+    $result->execute(array($place['Adresse'], $place['Description'], $place['auteur'] $place['transaction_id']));
     return $result;
 }
 
