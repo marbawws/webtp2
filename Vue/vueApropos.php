@@ -2,8 +2,8 @@
 
 <?php ob_start(); ?>
 <ul>
-    <li>Marwane Rezgui</li>
-
+	<h2><a href="https://github.com/marbawws/webtp2">LIEN VERS LE DEPOT GIT</a></h2>
+	<li>Marwane Rezgui</li>
     <li>420-4A4 MO Web et Bases de données</li>
     <li>Hiver 2020, Collège Montmorency</li>
 </ul>
