@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 03, 2020 at 10:06 PM
+-- Generation Time: May 04, 2020 at 09:57 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.4.0
 
@@ -32,6 +32,7 @@ CREATE TABLE `places` (
   `id` int(11) NOT NULL,
   `Adresse` varchar(255) NOT NULL,
   `Description` varchar(255) NOT NULL,
+  `auteur` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `transaction_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,10 +40,10 @@ CREATE TABLE `places` (
 -- Dumping data for table `places`
 --
 
-INSERT INTO `places` (`id`, `Adresse`, `Description`, `transaction_id`) VALUES
-(1, '1876, rue de la maniere', 'l\'interaction s\'est effectuer dans le jardin', 4),
-(2, '1876, rue de la maniere', 'l\'interaction s\'est effectuer dans le jardin', 4),
-(3, 'chezbob', 'Il fesait froid', 10);
+INSERT INTO `places` (`id`, `Adresse`, `Description`, `auteur`, `transaction_id`) VALUES
+(1, '1876, rue de la maniere', 'l\'interaction s\'est effectuer dans le jardin', '', 4),
+(2, '1876, rue de la maniere', 'l\'interaction s\'est effectuer dans le jardin', '', 4),
+(6, 'montreal', 'belle ville', 'xxx@sss.zz', 10);
 
 -- --------------------------------------------------------
 
@@ -167,7 +168,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT for table `places`
 --
 ALTER TABLE `places`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `transactions`
