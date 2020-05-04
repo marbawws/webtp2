@@ -75,7 +75,7 @@ function deletePlace($id) {
 function setPlace($place) {
     $bdd = getBdd();
     $result = $bdd->prepare('INSERT INTO places (Adresse, Description, auteur, transaction_id) VALUES(?, ?, ?, ?)');
-    $result->execute(array($place['Adresse'], $place['Description'], $place['auteur'] $place['transaction_id']));
+    $result->execute(array($place['Adresse'], $place['Description'], $place['auteur'], $place['transaction_id']));
     return $result;
 }
 

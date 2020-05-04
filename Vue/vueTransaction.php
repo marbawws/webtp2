@@ -4,7 +4,7 @@
 <article>
     <header>
         <h1 class="Daatetransaction"><?= $transaction['Daate'] ?></h1>
-        <time><?= $transaction['Daate'] ?></time>, par utilisateur #<?= $transaction['utilisateur_id'] ?>
+        <time><?= $transaction['Daate'] ?></time>, par utilisateur #<?= $transaction['Utilisateur_id'] ?>
     </header>
     <p><?= $transaction['Prix'] ?></p>
     <p><?= $transaction['retourInformation'] ?></p>
@@ -18,7 +18,7 @@
 		<a href="index.php?action=confirmer&id=<?= $place['id'] ?>" > <!--action-->
 			[Supprimer]
 		</a>
-		<!--<?//= $place['auteur'] ?> dit : <br/>-->
+		<?= $place['auteur'] ?> dit : <br/>
 		<strong><?= $place['Adresse'] ?></strong><br/>
 		<?= $place['Description'] ?>
     </p>

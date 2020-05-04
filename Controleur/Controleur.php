@@ -27,8 +27,8 @@ function transaction($idTransaction, $erreur) {
 
 // Ajoute une place à une transaction
 function place($place) {
-   /* $validation_courriel = filter_var($place['auteur'], FILTER_VALIDATE_EMAIL);
-    if ($validation_courriel) {*/
+    $validation_courriel = filter_var($place['auteur'], FILTER_VALIDATE_EMAIL);
+    if ($validation_courriel) {
         if (H204A4_PUBLIC) {
             $_SESSION['h204a4message'] = "Ajouter une place n'est pas permis en démonstration";
         } else {
@@ -37,10 +37,10 @@ function place($place) {
         }
         //Recharger la page pour mettre à jour la liste des places associés
         header('Location: index.php?action=transaction&id=' . $place['transaction_id']); 
- /*   } else {
+    } else {
         //Recharger la page avec une erreur près du courriel
         header('Location: index.php?action=transaction&id=' . $place['transaction_id'] . '&erreur=courriel');
-    }*/
+    }
 }
 
 // Confirmer la suppression d'une place
